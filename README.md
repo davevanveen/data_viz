@@ -1,1 +1,1 @@
-fun little data viz side projects
+miscellaneous data viz side projects
