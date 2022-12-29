@@ -34,8 +34,7 @@ def get_conjug_verb_list(did):
         extract verbs, conjugate to present, correct errors
         note: assumes verb is first word in did column '''
 
-    # from each entry, extract first word
-    # note: assumes first word is verb
+    # from each entry, extract first word (assumes verb)
     verbs = [s.split(' ')[0] for s in did]
 
     # conjugate verbs to present tense
