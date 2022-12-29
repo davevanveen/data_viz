@@ -63,5 +63,6 @@ def get_conjug_verb_list(did):
 
     return verbs
 
+
 if __name__ == '__main__':
     main()
