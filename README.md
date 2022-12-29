@@ -1,1 +1,1 @@
-miscellaneous data viz side projects
+miscellaneous data visualization side projects
