@@ -22,16 +22,16 @@ def main():
     did = df['did'].tolist()
 
     # extract and conjugate verbs
-    verbs_conjug = get_conjug_verb_list(did)
+    verbs = get_conjug_verb_list(did)
 
     # write to txt
     with open('verbs.txt', mode='wt', encoding='utf-8') as f:
-        f.write('\n'.join(verbs_conjug))
+        f.write('\n'.join(verbs))
 
 
 def get_conjug_verb_list(did):
-    ''' given a list of did (activities),
-        extract verbs and conjugate to present tense
+    ''' given a list of activities (did),
+        extract verbs, conjugate to present, correct errors
         note: assumes verb is first word in did column '''
 
     # from each entry, extract first word
@@ -39,7 +39,7 @@ def get_conjug_verb_list(did):
     verbs = [s.split(' ')[0] for s in did]
 
     # conjugate verbs to present tense
-    verbs_conjug = [WNL().lemmatize(s,'v') for s in verbs]
+    verbs = [WNL().lemmatize(s,'v') for s in verbs]
 
     # define manual substitutions to correct typos + ntlk errors
     subs = {
@@ -60,9 +60,9 @@ def get_conjug_verb_list(did):
     }
 
     # make substitutions
-    verbs_conjug = [subs.get(i,i) for i in verbs_conjug]
+    verbs = [subs.get(i,i) for i in verbs]
 
-    return verbs_conjug
+    return verbs
 
 if __name__ == '__main__':
     main()
