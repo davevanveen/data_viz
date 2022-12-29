@@ -63,7 +63,6 @@ def get_conjug_verb_list(did):
 
     # make substitutions
     verbs_conjug = [subs.get(i,i) for i in verbs_conjug]
-    assert len(did) == len(verbs_conjug)
 
     return verbs_conjug
 
