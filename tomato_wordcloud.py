@@ -44,14 +44,12 @@ def get_conjug_verb_list(did):
     # define manual substitutions to correct typos + ntlk errors
     subs = {
             'analyzew': 'analyze',
-            'attend': '',
             'buidl': 'build',
             'crete': 'create',
             'derivwe': 'derive',
             'disucss': 'discuss',
             'eval': 'evaluate',
             'instal': 'install',
-            'meet': '',
             'organizer': 'organize',
             'organizew': 'organize',
             'prep': 'prepare',
